@@ -1,0 +1,1 @@
+docker run -p 8080:8080 -p 50000:50000 --mount source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind --mount source=jenkins_home,target=/var/jenkins_home,type=volume --mount source=C:/Users/josev/DIR_C/public_lab1/Learn_CICD/,target=/Learn_CICD,type=bind --name jenkins-local4 -e JAVA_OPTS="-Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true" jenkins-docker
